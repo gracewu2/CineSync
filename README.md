@@ -156,32 +156,48 @@ Queries are pre-filtered by `doc_type` based on the active user role before sema
 | Production Designer | permit_requirements, department_requirements |
 
 ---
-
 ## Features Implemented
 
-| React group chat UI 
-| Multi-role switching (Director, Producer, Location Manager, AD, PD)
-| Image upload + drag-and-drop 
-| Real vision analysis on uploaded location photos (GPT-4o mini)
-| FastAPI backend
-| ChromaDB persistent knowledge base (251 chunks, 12 docs) 
-| PDF ingestion pipeline
-| Section-aware chunking with rich metadata 
-| Role-filtered semantic RAG retrieval 
-| Source-cited AI responses (per FilmLA / per DGA Section...) 
-| Role-tailored system prompts per user role 
-| Multi-turn conversation memory 
-| TMZ zone lookup — GPS/address → zone status 
-| Hybrid TMZ boundary (contractual lookup + geometric haversine)
-| TMZ budget impact calculator (per diem, hotel, union premium) 
-| Sun Path Analyzer — golden hour, blue hour, shooting windows
-| Sun path arc diagram (SVG, interactive)
-| AI-generated location maps in chat (OpenStreetMap embed iframes) 
-| Location detection from natural language messages (regex) 
-| Mobile-responsive layout
-| PWA (Progressive Web App) — installable via Chrome 
-| Service worker + web manifest 
+### 🤖 AI Chat & RAG System
+- React-based group chat interface
+- Multi-role switching (Director, Producer, Location Manager, Assistant Director, Production Designer)
+- GPT-4o mini integration for AI-powered responses
+- Real vision analysis of uploaded location photos
+- Multi-turn conversation memory
+- Role-tailored system prompts for different production roles
+- Source-cited AI responses referencing FilmLA, DGA, IATSE, and other official documents
 
+### 📚 Knowledge Base & Retrieval Pipeline
+- Persistent ChromaDB vector database
+- Knowledge base built from 12 official production documents (251 indexed chunks)
+- PDF ingestion pipeline for document processing
+- Section-aware chunking to preserve legal clauses and context
+- Rich metadata tagging (document type, jurisdiction, topic, role relevance)
+- Role-filtered semantic RAG retrieval using sentence-transformer embeddings
+
+### 🎬 Film Production Intelligence Tools
+- TMZ Zone Lookup — address/GPS-based Thirty Mile Zone determination
+- Hybrid TMZ boundary calculation combining contractual rules with geometric Haversine distance
+- TMZ budget impact calculator (travel pay, per diem, hotel, union cost implications)
+- Sun Path Analyzer for golden hour, blue hour, and shooting windows
+- Interactive SVG sun path arc visualization
+- AI-generated location maps using OpenStreetMap embeds
+- Natural language location detection using regex patterns
+
+### 🏗️ Backend & Infrastructure
+- FastAPI backend API
+- REST API endpoints connecting frontend and backend
+- OpenStreetMap Nominatim integration for geocoding
+- Astral library integration for solar position calculations
+- Persistent ChromaDB storage
+
+### 📱 Frontend & Deployment
+- Responsive React frontend
+- Mobile-friendly layout with hamburger navigation
+- Progressive Web App (PWA) support
+- Installable through Chrome "Add to Home Screen"
+- Service worker implementation
+- Web app manifest configuration
 ---
 
 ## LLM Migration History
