@@ -1,0 +1,96 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Backgrounds */
+  --bg-base:     #F2F4F8;
+  --bg-surface:  #FFFFFF;
+  --bg-elevated: #F8F9FC;
+  --bg-input:    #FFFFFF;
+  --bg-modal:    #FFFFFF;
+  --bg-card:     #F5F7FC;
+
+  /* Borders */
+  --border:       #DDE2EE;
+  --border-bright: #C8D2E6;
+  --border-card:  #D4DCEE;
+
+  /* Brand — darker for light-mode contrast */
+  --amber:      #D97706;
+  --amber-dim:  #B45309;
+  --amber-glow: rgba(217, 119, 6, 0.08);
+  --teal:       #0D9488;
+  --teal-dim:   #0F766E;
+  --teal-glow:  rgba(13, 148, 136, 0.08);
+  --red:        #DC2626;
+  --red-glow:   rgba(220, 38, 38, 0.08);
+  --gold:       #B45309;
+
+  /* Text — excellent contrast ratios on white */
+  --text-primary:   #0F172A;
+  --text-secondary: #374151;
+  --text-body:      #4B5563;
+  --text-label:     #6B7280;
+  --text-muted:     #9CA3AF;
+
+  --font-display: 'Barlow Condensed', sans-serif;
+  --font-body:    'Barlow', sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  background: var(--bg-base);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg-elevated); }
+::-webkit-scrollbar-thumb { background: var(--border-bright); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+
+/* ── Markdown AI response styles ── */
+.ai-content h1, .ai-content h2, .ai-content h3 {
+  font-family: var(--font-display);
+  letter-spacing: 0.03em;
+  margin-bottom: 6px;
+  color: var(--teal);
+  font-weight: 700;
+  font-size: 15px;
+}
+.ai-content strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+.ai-content p {
+  margin-bottom: 8px;
+  line-height: 1.7;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+.ai-content ul, .ai-content ol {
+  padding-left: 18px;
+  margin-bottom: 8px;
+}
+.ai-content li {
+  margin-bottom: 5px;
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--text-secondary);
+}
+.ai-content code {
+  font-family: var(--font-mono);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: var(--amber-dim);
+}

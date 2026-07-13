@@ -1,0 +1,30 @@
+venv/
+.env
+__pycache__/
+*.zip
+*.json
+*.csv
+*.pdf
+node_modules/
+
+# Mac
+.DS_Store
+
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Environment
+.env
+
+# Node
+node_modules/
+
+# ChromaDB
+chroma_db/
+
+# R files
+.Rhistory
+
+README.md
